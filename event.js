@@ -4,11 +4,9 @@ class EventEmitter {
   }
 
   on(event, listener) {
-    // بررسی اینکه آیا این رویداد قبلاً ثبت شده یا خیر
     if (!this.events.has(event)) {
       this.events.set(event, []);
     }
-    // اضافه کردن لیسنر به لیست رویداد
     this.events.get(event).push(listener);
   }
 
